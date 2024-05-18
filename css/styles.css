@@ -36,3 +36,33 @@ h1 {
   width: 200px;
   height: 200px;
 }
+
+.title-projects {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* section courses */
+.courses-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8rem;
+}
+
+.title-courses {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.courses-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses-section img {
+  width: 150px;
+  height: 150px;
+}
