@@ -2,13 +2,10 @@
 
 :root {
   --text-title: #ffffff;
-
   --text-total: #8892b0;
   --text-second-2: #00c4e1;
-
   --color-background: #313131;
   --color-background-secondary: #0e2443;
-
   --font-main: "Signika Negative", sans-serif;
   --font-secondary: "Fira Code", monospace;
 }
@@ -19,35 +16,42 @@ html {
   color: var(--text-title);
 }
 
-h1 {
-  font-size: 3rem;
+hr {
+  width: 90%;
+  margin-bottom: 4rem;
 }
 
-.main-section {
-  height: 100vh;
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.presentation {
+  height: 50dvh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
+  text-align: center;
+  flex-direction: column;
 }
 
-.main-section img {
-  align-items: center;
-  width: 200px;
-  height: 200px;
+.presentation img {
+  width: 150px;
+  height: 150px;
 }
 
+/* section courses */
 .title-projects {
   font-size: 1.3rem;
   text-align: center;
   margin-bottom: 4rem;
 }
 
-/* section courses */
 .courses-section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 8rem;
+  grid-template-columns: 1fr;
+  gap: 4rem;
 }
 
 .title-courses {
@@ -63,6 +67,61 @@ h1 {
 }
 
 .courses-section img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+}
+
+/* queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .presentation p {
+    font-size: 12px;
+    margin-top: 1rem;
+  }
+}
+
+/* min */
+
+@media (min-width: 768px) {
+  .presentation {
+    flex-direction: row;
+    text-align: left;
+    margin: 2rem;
+  }
+
+  .presentation img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .courses-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+
+  .courses-section img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .courses-section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8rem;
+  }
+
+  .courses-section img {
+    width: 150px;
+    height: 150px;
+  }
 }
