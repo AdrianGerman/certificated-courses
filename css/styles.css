@@ -16,29 +16,54 @@ html {
   color: var(--text-title);
 }
 
-hr {
-  width: 90%;
-  margin-bottom: 4rem;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  gap: 6rem;
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 0;
+strong {
+  background-color: #76428a;
+  padding: 0.2rem;
 }
 
-.presentation {
-  height: 50dvh;
+/* titulo */
+.title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 3rem;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.title img {
+  width: 160px;
+}
+
+/* presentación */
+.text-info {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  text-align: center;
-  flex-direction: column;
+  gap: 2rem;
+  max-width: 48rem;
 }
 
-.presentation img {
-  width: 150px;
-  height: 150px;
+.text-info img {
+  width: 160px;
+  height: 160px;
+  transform: rotate(6deg);
+  border-radius: 10px;
 }
 
 /* section courses */
@@ -50,8 +75,8 @@ h1 {
 
 .courses-section {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
 }
 
 .title-courses {
@@ -67,61 +92,37 @@ h1 {
 }
 
 .courses-section img {
-  width: 100px;
-  height: 100px;
+  border-radius: 6px;
+  width: 300px;
 }
 
-/* queries */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+  .text-info {
+    flex-direction: column;
   }
-}
-
-@media (max-width: 400px) {
-  h1 {
-    font-size: 1.6rem;
+  .text-info img {
+    order: -1;
   }
-
-  .presentation p {
-    font-size: 12px;
-    margin-top: 1rem;
-  }
-}
-
-/* min */
-
-@media (min-width: 768px) {
-  .presentation {
-    flex-direction: row;
-    text-align: left;
-    margin: 2rem;
-  }
-
-  .presentation img {
-    width: 200px;
-    height: 200px;
-  }
-
   .courses-section {
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-  }
-
-  .courses-section img {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .courses-section {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: auto;
     gap: 8rem;
   }
+}
 
-  .courses-section img {
-    width: 150px;
-    height: 150px;
+@media (max-width: 530px) {
+  .title {
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .title img {
+    width: 100px;
   }
 }
