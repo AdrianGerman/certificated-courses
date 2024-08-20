@@ -1,0 +1,40 @@
+strong {
+  background-color: #76428a;
+  padding: 0.2rem;
+}
+
+/* titulo */
+.title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 3rem;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.title img {
+  width: 160px;
+}
+
+/* presentación */
+.text-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 48rem;
+}
+
+.text-info img {
+  width: 160px;
+  height: 160px;
+  transform: rotate(6deg);
+  border-radius: 10px;
+}

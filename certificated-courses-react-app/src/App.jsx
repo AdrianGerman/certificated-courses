@@ -1,10 +1,11 @@
 import "./App.css"
+import { HeaderTitle } from "./components/HeaderTitle"
 
 function App() {
   return (
-    <>
-      <h1>Hola, web page</h1>
-    </>
+    <main>
+      <HeaderTitle />
+    </main>
   )
 }
 
