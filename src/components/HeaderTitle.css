@@ -38,3 +38,9 @@ strong {
   transform: rotate(6deg);
   border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+  .title {
+    padding: 0;
+  }
+}

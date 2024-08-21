@@ -37,24 +37,6 @@ export const CoursesList = () => {
           ))}
         </div>
 
-        {/* <div>
-          <section className="titles-sections">
-            <h2
-              className="title-courses"
-              style={{
-                backgroundColor: "purple",
-                padding: ".6rem",
-                borderRadius: "12px"
-              }}
-            >
-              Rutas
-            </h2>
-            <h2 className="title-courses">Frontend</h2>
-            <h2 className="title-courses">Backend</h2>
-            <h2 className="title-courses">Otros</h2>
-          </section>
-        </div> */}
-
         <div>
           <h2 className="title-courses">
             {selectedCategory.charAt(0).toUpperCase() +
@@ -71,20 +53,6 @@ export const CoursesList = () => {
             ))}
           </div>
         </div>
-
-        {/* Sección de Rutas */}
-        {/* <div>
-          <div className="courses-section">
-            {courses.rutas.map((course, index) => (
-              <CourseCard
-                key={index}
-                title={course.title}
-                description={course.description}
-                image={course.image}
-              />
-            ))}
-          </div>
-        </div> */}
       </section>
     </>
   )
