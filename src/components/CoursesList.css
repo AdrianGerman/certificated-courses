@@ -21,11 +21,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: red; */
 }
 
 .courses-section img {
   border-radius: 6px;
-  width: 300px;
+  width: 60%;
+}
+
+.courses-section {
+  text-align: center;
+  h3,
+  p {
+    width: 60%;
+  }
 }
 
 @media (max-width: 768px) {

@@ -1,4 +1,4 @@
-import "./CoursesContent.css"
+import "./CoursesList.css"
 import CourseCard from "./CourseCard"
 import courses from "../data/courses"
 
