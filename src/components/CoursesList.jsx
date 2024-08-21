@@ -1,8 +1,17 @@
 import "./CoursesList.css"
 import CourseCard from "./CourseCard"
 import courses from "../data/courses"
+import React, { useState } from "react"
 
 export const CoursesList = () => {
+  // Estado para la categoría seleccionada
+  const [selectedCategory, setSelectedCategory] = useState("rutas")
+
+  // Función para manejar el cambio de categoría
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category)
+  }
+
   return (
     <>
       <section className="courses">
@@ -10,10 +19,49 @@ export const CoursesList = () => {
           <h2>Mis cursos</h2>
         </div>
 
+        {/* Botones para los filtros */}
+        <div className="titles-sections">
+          {["rutas", "frontend", "backend", "otros"].map((category) => (
+            <a
+              key={category}
+              className={`ancore-section-title ${
+                selectedCategory === category ? "active" : ""
+              }`}
+              onClick={(e) => {
+                e.preventDefault()
+                handleCategoryChange(category)
+              }}
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </a>
+          ))}
+        </div>
+
+        {/* <div>
+          <section className="titles-sections">
+            <h2
+              className="title-courses"
+              style={{
+                backgroundColor: "purple",
+                padding: ".6rem",
+                borderRadius: "12px"
+              }}
+            >
+              Rutas
+            </h2>
+            <h2 className="title-courses">Frontend</h2>
+            <h2 className="title-courses">Backend</h2>
+            <h2 className="title-courses">Otros</h2>
+          </section>
+        </div> */}
+
         <div>
-          <h2 className="title-courses">Rutas</h2>
+          <h2 className="title-courses">
+            {selectedCategory.charAt(0).toUpperCase() +
+              selectedCategory.slice(1)}
+          </h2>
           <div className="courses-section">
-            {courses.map((course, index) => (
+            {courses[selectedCategory].map((course, index) => (
               <CourseCard
                 key={index}
                 title={course.title}
@@ -23,6 +71,20 @@ export const CoursesList = () => {
             ))}
           </div>
         </div>
+
+        {/* Sección de Rutas */}
+        {/* <div>
+          <div className="courses-section">
+            {courses.rutas.map((course, index) => (
+              <CourseCard
+                key={index}
+                title={course.title}
+                description={course.description}
+                image={course.image}
+              />
+            ))}
+          </div>
+        </div> */}
       </section>
     </>
   )
