@@ -4,14 +4,7 @@ export const HeaderTitle = () => {
   return (
     <>
       <div className="title">
-        <h1>
-          Todos mis <br />
-          certificados
-        </h1>
-        <img
-          src="https://raw.githubusercontent.com/AdrianGerman/Portfolio/main/img/cafecito.webp"
-          alt="taza de cafe logo"
-        />
+        <h1>CERTIFICADOS</h1>
       </div>
 
       <div className="text-info">

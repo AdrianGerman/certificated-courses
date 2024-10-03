@@ -15,10 +15,6 @@ export const CoursesList = () => {
   return (
     <>
       <section className="courses">
-        <div className="title-projects">
-          <h2>Mis cursos</h2>
-        </div>
-
         {/* Botones para los filtros */}
         <div className="titles-sections">
           {["rutas", "frontend", "backend", "otros"].map((category) => (
