@@ -6,10 +6,15 @@ import React, { useState } from "react"
 export const CoursesList = () => {
   // Estado para la categoría seleccionada
   const [selectedCategory, setSelectedCategory] = useState("rutas")
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   // Función para manejar el cambio de categoría
   const handleCategoryChange = (category) => {
-    setSelectedCategory(category)
+    setIsTransitioning(true)
+    setTimeout(() => {
+      setSelectedCategory(category)
+      setIsTransitioning(false)
+    }, 200)
   }
 
   return (
@@ -38,7 +43,11 @@ export const CoursesList = () => {
             {selectedCategory.charAt(0).toUpperCase() +
               selectedCategory.slice(1)}
           </h2>
-          <div className="courses-section">
+          <div
+            className={`courses-section ${
+              isTransitioning ? "fade-out" : "fade-in"
+            }`}
+          >
             {courses[selectedCategory].map((course, index) => (
               <CourseCard
                 key={index}

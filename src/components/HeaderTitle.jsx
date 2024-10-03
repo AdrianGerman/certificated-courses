@@ -16,10 +16,12 @@ export const HeaderTitle = () => {
           conocer un poco de mis intereses en el mundo del{" "}
           <strong>Desarrollo web.</strong>
         </p>
-        <img
-          src="https://pbs.twimg.com/profile_images/1776312145816227840/ISlE225__400x400.jpg"
-          alt="la imagen de example"
-        />
+        <a href="https://adriangerman.com" target="_blank">
+          <img
+            src="https://pbs.twimg.com/profile_images/1776312145816227840/ISlE225__400x400.jpg"
+            alt="la imagen de example"
+          />
+        </a>
       </div>
     </>
   )
